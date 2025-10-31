@@ -2,11 +2,11 @@
 const designPictures = [
   // { title: 'Опорная кривая', src: '/images/d1.jpg' },
   // { title: 'Опорные кривые', src: '/images/d2.jpg' },
+  { title: '3D-модель:', src: '/images/d7.jpg' },
   { title: 'Опорные кривые:', src: '/images/d3.jpg', top: 850, left: 2000, height: 2000 },
   { title: 'Поверхность:', src: '/images/d4.jpg', top: 850, left: 2000, height: 2000  },
   { title: 'Зеркальная копия:', src: '/images/d5.jpg', top: 850, left: 2000, height: 2000 },
   { title: 'Готовая опорная поверхность:', src: '/images/d6.jpg', top: 700, left: 1300},
-  { title: 'Модель:', src: '/images/d7.jpg' },
 ]
 
 </script>
@@ -15,7 +15,26 @@ const designPictures = [
   <UApp>
     <UColorModeButton class="fixed top-4 right-4" />
 
-    <div class="mt-10 max-w-fit mx-auto pb-28">
+    <main class="mt-10 max-w-fit mx-auto pb-28">
+      <h1
+        class="text-2xl font-medium text-center mb-5"
+      >
+        Изделие «Пепельница»
+      </h1>    
+       
+      <table class="m-8">
+        <tbody>
+          <tr>
+            <td class="text-right">Автор:</td>
+            <td>Бачманов Виктор</td>
+          </tr>
+          <tr>
+            <td>Материал:</td>
+            <td>алюминий</td>
+          </tr>
+        </tbody>
+      </table>
+
       <DesignPicture
         v-for="designPicture in designPictures"
         :key="designPicture.src"
@@ -24,7 +43,7 @@ const designPictures = [
         :top="designPicture.top"
         :left="designPicture.left"
         :height="designPicture.height"
-        class="my-1"
+        class="my-6"
       />
 
       <video
@@ -62,6 +81,12 @@ const designPictures = [
         format="webp"
       />
       
-    </div>
+      </main>
   </UApp>
 </template>
+
+<style scoped>
+td {
+  padding: 0.25em;
+}
+</style>

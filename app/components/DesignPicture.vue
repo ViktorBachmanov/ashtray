@@ -20,7 +20,7 @@ const props = defineProps({
 <template>
   <div>
     <div
-      class="text-center"
+      class="text-center mb-2"
     >
       {{ name }}
     </div>
