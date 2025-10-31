@@ -30,7 +30,7 @@ const designPictures = [
           </tr>
           <tr>
             <td>Материал:</td>
-            <td>алюминий</td>
+            <td>Алюминий</td>
           </tr>
         </tbody>
       </table>
