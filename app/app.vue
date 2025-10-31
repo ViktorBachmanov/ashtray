@@ -1,13 +1,5 @@
 <script setup>
-const designPictures = [
-  // { title: 'Опорная кривая', src: '/images/d1.jpg' },
-  // { title: 'Опорные кривые', src: '/images/d2.jpg' },
-  { title: '3D-модель:', src: '/images/d7.jpg' },
-  { title: 'Опорные кривые:', src: '/images/d3.jpg', top: 850, left: 2000, height: 2000 },
-  { title: 'Поверхность:', src: '/images/d4.jpg', top: 850, left: 2000, height: 2000  },
-  { title: 'Зеркальная копия:', src: '/images/d5.jpg', top: 850, left: 2000, height: 2000 },
-  { title: 'Готовая опорная поверхность:', src: '/images/d6.jpg', top: 700, left: 1300},
-]
+
 
 </script>
 
@@ -35,38 +27,29 @@ const designPictures = [
         </tbody>
       </table>
 
-      <DesignPicture
-        v-for="designPicture in designPictures"
-        :key="designPicture.src"
-        :src="designPicture.src"
-        :name="designPicture.title"
-        :top="designPicture.top"
-        :left="designPicture.left"
-        :height="designPicture.height"
-        class="my-6"
-      />
+      <Carousel />
 
       <video
-        width="550"
-        height="550"
+        width="700"
+        height="700"
         muted
         playsinline
         controls
-        src="/video/rough.webm"
+        src="/video/full-1.webm"
         class="aspect-square mx-auto"
-        poster="/images/rough-poster.png"
+        poster="/images/semi-finish-traj.png"
       >
       </video>
 
       <video
-        width="550"
-        height="550"
+        width="700"
+        height="700"
         muted
         playsinline
         controls
-        src="/video/semi-finish.webm"
+        src="/video/semi-finish-traj.webm"
         class="aspect-square mx-auto"
-        poster="/images/semi-finish-poster.png"
+        poster="/images/semi-finish-traj.png"
       >
       </video>
 

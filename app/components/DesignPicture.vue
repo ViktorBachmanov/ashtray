@@ -2,18 +2,18 @@
 const props = defineProps({
   src: String,
   name: String,
-  top: {
-    type: Number,
-    default: 900,
-  },
-  left: {
-    type: Number,
-    default: 1400,
-  },
-  height: {
-    type: Number,
-    default: 3300,
-  }
+  // top: {
+  //   type: Number,
+  //   default: 900,
+  // },
+  // left: {
+  //   type: Number,
+  //   default: 1400,
+  // },
+  // height: {
+  //   type: Number,
+  //   default: 3300,
+  // }
 })
 </script>
 
@@ -25,7 +25,7 @@ const props = defineProps({
       {{ name }}
     </div>
 
-    <NuxtImg
+    <!-- <NuxtImg
       :src
       :modifiers="{
         extract: `${props.left}_${props.top}_3800_${props.height}`
@@ -35,6 +35,12 @@ const props = defineProps({
       sizes="90vw sm:500px"
       class="sm:w-[500px] mx-auto"
       format="webp"
+    /> -->
+
+    <img 
+      :src 
+      width='1100'
+      height='859'
     />
   </div>
 </template>
