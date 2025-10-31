@@ -2,11 +2,11 @@
 const designPictures = [
   // { title: 'Опорная кривая', src: '/images/d1.jpg' },
   // { title: 'Опорные кривые', src: '/images/d2.jpg' },
-  { title: 'Опорная поверхность', src: '/images/d3.jpg' },
-  { title: 'Опорная кривая', src: '/images/d4.jpg' },
-  { title: 'Опорная кривая', src: '/images/d5.jpg' },
-  { title: 'Опорная кривая', src: '/images/d6.jpg' },
-  { title: 'Модель', src: '/images/d7.jpg' },
+  { title: 'Опорные кривые:', src: '/images/d3.jpg', top: 850, left: 2000, height: 2000 },
+  { title: 'Поверхность:', src: '/images/d4.jpg', top: 850, left: 2000, height: 2000  },
+  { title: 'Зеркальная копия:', src: '/images/d5.jpg', top: 850, left: 2000, height: 2000 },
+  { title: 'Готовая опорная поверхность:', src: '/images/d6.jpg', top: 700, left: 1300},
+  { title: 'Модель:', src: '/images/d7.jpg' },
 ]
 
 </script>
@@ -15,18 +15,16 @@ const designPictures = [
   <UApp>
     <UColorModeButton class="fixed top-4 right-4" />
 
-    <div class="max-w-fit mx-auto pb-28">
-      <NuxtImg
+    <div class="mt-10 max-w-fit mx-auto pb-28">
+      <DesignPicture
         v-for="designPicture in designPictures"
         :key="designPicture.src"
         :src="designPicture.src"
-        :modifiers="{
-          extract: '1400_900_3800_3300'
-        }"
-        width="3800"
-        sizes="90vw sm:500px"
-        class="my-1 sm:w-[500px] mx-auto"
-        format="webp"
+        :name="designPicture.title"
+        :top="designPicture.top"
+        :left="designPicture.left"
+        :height="designPicture.height"
+        class="my-1"
       />
 
       <video
