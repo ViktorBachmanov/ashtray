@@ -22,7 +22,7 @@ const props = defineProps({
     class="bg-black"
   >
     <div
-      class="text-center text-white p-2"
+      class="text-white p-2 absolute right-2 bottom-2"
     >
       {{ name }}
     </div>
@@ -35,7 +35,7 @@ const props = defineProps({
       width="1100"
       height="859"
       sizes="90vw sm:800px"
-      class="sm:w-[500px] mx-auto border-emerald-600 border"
+      class="max-w-full mx-auto border-emerald-600 border"
       format="webp"
     />
 

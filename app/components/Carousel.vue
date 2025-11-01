@@ -96,7 +96,7 @@ onMounted(() => {
     } else {
       handlePrevPic()
     }
-  }, 2000)
+  }, 3000)
 })
 
 onUnmounted(() => clearInterval(intervalId))
@@ -124,7 +124,12 @@ function handleNextPic() {
 const isFirstIndex = computed(() => curPicIndex.value === 0)
 const isLastIndex = computed(() => curPicIndex.value === lastPicIndex.value)
 
+const stopped = ref(false)
 
+function handleStop() {
+  clearInterval(intervalId)
+  stopped.value = true
+}
 </script>
 
 <template>
@@ -137,7 +142,6 @@ const isLastIndex = computed(() => curPicIndex.value === lastPicIndex.value)
       :top="firstPic.top"
       :left="firstPic.left"
       :height="firstPic.height"
-      class="my-6"
     />
 
     <DesignPicture
@@ -151,15 +155,24 @@ const isLastIndex = computed(() => curPicIndex.value === lastPicIndex.value)
     />
   </div>
 
-  <UButton
-    @click="handlePrevPic"
-    :disabled="isFirstIndex"
-  >Prev</UButton>
+  <div
+    class="mt-2 flex gap-2"
+  >
+    <UButton
+      @click="handlePrevPic"
+      :disabled="isFirstIndex"
+    >Prev</UButton>
 
-  <UButton
-    @click="handleNextPic"
-    :disabled="isLastIndex"
-  >Next</UButton>
+    <UButton
+      @click="handleNextPic"
+      :disabled="isLastIndex"
+    >Next</UButton>
+
+    <UButton
+      @click="handleStop"
+      :disabled="stopped"
+    >Stop</UButton>
+  </div>
 
 </template>
 
