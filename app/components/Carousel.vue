@@ -1,10 +1,10 @@
 <script setup>
 const designPictures = [
   { title: 'Опорные кривые', src: '/images/3.jpg', left: 140, top: 80, height: 700, },
-  { title: 'Поверхность', src: '/images/4.jpg', left: 140, top: 80, height: 700, },
+  { title: 'Лоскут-Восьмушка', src: '/images/4.jpg', left: 140, top: 80, height: 700, },
   { title: 'Зеркальная копия', src: '/images/5.jpg', left: 140, top: 60, },
   { title: 'Сшивка', src: '/images/7.jpg', left: 140, top: 60, },
-  { title: 'Четверть поверхности', src: '/images/6.jpg', left: 140, top: 60, },
+  { title: 'Лоскут-Четверть', src: '/images/6.jpg', left: 140, top: 60, },
   { title: 'Зеркальные копии', src: '/images/8.jpg', left: 150, top: 60, },
   { title: 'Сшивка', src: '/images/9.jpg', left: 150, top: 60, },
   { title: 'Готовая опорная поверхность', src: '/images/10.jpg', left: 150, top: 60, },

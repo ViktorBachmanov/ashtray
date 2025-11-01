@@ -34,7 +34,7 @@ const props = defineProps({
       }"
       width="1100"
       height="859"
-      sizes="90vw sm:800px"
+      sizes="90vw sm:890px"
       class="max-w-full mx-auto border-emerald-600 border"
       format="webp"
     />

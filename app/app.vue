@@ -7,11 +7,11 @@
   <UApp>
     <UColorModeButton class="fixed top-4 right-4" />
 
-    <main class="mt-10 max-w-fit mx-auto pb-28">
+    <main class="pt-20 max-w-fit mx-auto pb-28">
       <h1
-        class="text-2xl font-medium text-center mb-5"
+        class="text-3xl font-medium text-center leading-12 mb-10"
       >
-        Изделие «Пепельница»
+        Пепельница<br>«Юбилейная»
       </h1>    
        
       <!-- <table class="m-8">
@@ -30,9 +30,9 @@
       <section
         class="flex flex-wrap justify-center max-w-[90vw] gap-10"
       >
-        <div class="sm:w-[45vw]">
-          <h2 class="text-xl font-medium text-center my-2">
-            Дизайн
+        <div class="max-w-[890px]">
+          <h2 class="text-2xl font-medium indent-3 mb-4">
+            Дизайн и построение 3D-модели
           </h2>
 
           <Carousel 
@@ -40,7 +40,7 @@
         </div>
 
         <div>
-          <h2 class="text-xl font-medium text-center my-2">
+          <h2 class="text-2xl font-medium indent-3 mb-4">
             Симуляция черновой и получистовой фрезеровок
           </h2>
 
@@ -74,8 +74,8 @@
         </div> -->
 
         <div>
-          <h2 class="text-xl font-medium text-center my-2">
-            Фото готового изделия
+          <h2 class="text-2xl font-medium indent-3 mb-4">
+            Готовое изделие
           </h2>
 
           <NuxtImg
@@ -84,8 +84,8 @@
               extract: '700_400_2600_1900'
             }"
             width="3800"
-            sizes="90vw sm:800px"
-            class="sm:w-[800px] mx-auto"
+            sizes="90vw sm:890"
+            class="sm:w-[890px] mx-auto"
             format="webp"
             alt="Фото"
           />
@@ -94,15 +94,51 @@
       
       </main>
 
-      <footer class="flex justify-evenly border-top pb-20">
-        <span>Инженер-конструктор, технолог-программист, оператор-наладчик ЧПУ: Бачманов Виктор</span>
-        <span>Материал: Алюминий</span>
+      <footer class="flex flex-col items-center border-t-1 border-gray-300 pt-12 pb-16">
+        <table>
+          <caption  class="text-center text-xl font-medium tracking-wide pb-5 pl-16">
+            В ролях:
+          </caption>
+          
+          <tbody>
+            <tr>
+              <td>Дизайн и построение 3D-модели</td>
+              <td>Бачманов</td>
+            </tr>
+            <tr>
+              <td>Технология и программирование ЧПУ</td>
+              <td>Виктор</td>
+            </tr>
+            <tr>
+              <td>Фрезеровка на станке MiniMill</td>
+              <td>Владимирович</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Материал</td>
+              <td>Алюминий</td>
+            </tr>
+          </tbody>
+        </table>
+
       </footer>
   </UApp>
 </template>
 
 <style scoped>
+th {
+  padding: 0.5em;
+}
+
 td {
-  padding: 0.25em;
+  padding: 0.33em;
+}
+
+th:first-child, td:first-child {
+  padding-right: 1em;
+  text-align: right;
 }
 </style>
