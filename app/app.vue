@@ -5,11 +5,13 @@
 
 <template>
   <UApp>
-    <UColorModeButton class="fixed top-4 right-4" />
+    <main class="max-v-[100vw] md:max-w-[1000px] mx-auto pb-16 mt-4">
+      <div class="flex justify-end">
+        <UColorModeButton class="mt-2 mr-4" />
+      </div>
 
-    <main class="pt-20 max-w-fit mx-auto pb-28">
       <h1
-        class="text-3xl font-medium text-center leading-12 mb-10"
+        class="text-3xl font-medium text-center leading-12 mb-5 -mt-4"
       >
         Пепельница<br>«Юбилейная»
       </h1>    
@@ -28,25 +30,26 @@
       </table> -->
 
       <section
-        class="flex flex-wrap justify-center max-w-[90vw] gap-10"
+        class="flex flex-col items-center gap-10 px-2"
       >
-        <div class="max-w-[890px]">
-          <h2 class="text-2xl font-medium indent-3 mb-4">
-            Дизайн и построение 3D-модели
+        <div class="max-w-[890px] drop-shadow-2xl  rounded-t-xl">
+          <h2 class="text-2xl font-medium indent-3 p-2">
+            Дизайн и построение <span class="whitespace-nowrap">3D-модели</span>
           </h2>
 
-          <Carousel 
-          />
+          <Carousel class="" />
         </div>
 
-        <div>
-          <h2 class="text-2xl font-medium indent-3 mb-4">
-            Симуляция черновой и получистовой фрезеровок
+        <div class="shadow-2xl  rounded-t-xl ">
+          <h2 class="text-2xl font-medium indent-3 p-2">
+            Симуляция черновой и получистовой обработки
           </h2>
 
           <video
             width="890"
             muted
+            autoplay
+            loop
             playsinline
             controls
             src="/video/set-10.webm"
@@ -73,15 +76,15 @@
           </video>
         </div> -->
 
-        <div>
-          <h2 class="text-2xl font-medium indent-3 mb-4">
+        <div class="shadow-2xl rounded-t-xl">
+          <h2 class="text-2xl font-medium indent-3 my-4 ">
             Готовое изделие
           </h2>
 
           <NuxtImg
             src="/images/IMG_20181117_140947_BURST1.jpg"
             :modifiers="{
-              extract: '700_400_2600_1900'
+              extract: '800_480_2300_1640'
             }"
             width="3800"
             sizes="90vw sm:890"
@@ -96,21 +99,21 @@
 
       <footer class="flex flex-col items-center border-t-1 border-gray-300 pt-12 pb-16">
         <table>
-          <caption  class="text-center text-xl font-medium tracking-wide pb-5 pl-16">
+          <caption  class="text-center text-xl font-medium tracking-wide pb-5">
             В ролях:
           </caption>
           
           <tbody>
             <tr>
-              <td>Дизайн и построение 3D-модели</td>
+              <td>Дизайн <span class="whitespace-nowrap">3D-модели</span></td>
               <td>Бачманов</td>
             </tr>
             <tr>
-              <td>Технология и программирование ЧПУ</td>
+              <td>Программирование ЧПУ</td>
               <td>Виктор</td>
             </tr>
             <tr>
-              <td>Фрезеровка на станке MiniMill</td>
+              <td>Фрезеровка на станке <span class="whitespace-nowrap">AWEA</span></td>
               <td>Владимирович</td>
             </tr>
             <tr>
