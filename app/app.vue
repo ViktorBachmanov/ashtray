@@ -6,28 +6,15 @@
 <template>
   <UApp>
     <main class="max-v-[100vw] md:max-w-[1000px] mx-auto pb-16 mt-4">
-      <div class="flex justify-end">
+      <div class="flex justify-end min-h-10">
         <UColorModeButton class="mt-2 mr-4" />
       </div>
 
       <h1
-        class="text-3xl font-medium text-center leading-12 mb-5 -mt-4"
+        class="text-3xl font-medium text-center leading-12 mb-8 -mt-4"
       >
         Пепельница<br>«Юбилейная»
       </h1>    
-       
-      <!-- <table class="m-8">
-        <tbody>
-          <tr>
-            <td class="text-right">Автор:</td>
-            <td>Бачманов Виктор</td>
-          </tr>
-          <tr>
-            <td>Материал:</td>
-            <td>Алюминий</td>
-          </tr>
-        </tbody>
-      </table> -->
 
       <section
         class="flex flex-col items-center gap-10 px-2"
