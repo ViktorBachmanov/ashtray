@@ -72,17 +72,27 @@ let intervalId
 onMounted(() => {
   curPicIndex.value = 0
 
-  intervalId = setInterval(() => {
-    let nextPicIndex = curPicIndex.value + 1
-    if(nextPicIndex > designPictures.length - 1) {
-      clearInterval(intervalId)
-      return 
-    }
-    setPicIndex(nextPicIndex)
-  }, 3000)
+  // intervalId = setInterval(() => {
+  //   let nextPicIndex = curPicIndex.value + 1
+  //   if(nextPicIndex > designPictures.length - 1) {
+  //     clearInterval(intervalId)
+  //     return 
+  //   }
+  //   setPicIndex(nextPicIndex)
+  // }, 3000)
 })
 
-onUnmounted(() => clearInterval(intervalId))
+// onUnmounted(() => clearInterval(intervalId))
+
+function handleNextPic() {
+  if(isLastIndex()) return
+
+  curPicIndex.value++
+}
+
+function isLastIndex() {
+  return curPicIndex.value === designPictures.length - 1
+}
 </script>
 
 <template>
@@ -99,6 +109,11 @@ onUnmounted(() => clearInterval(intervalId))
       :style="{ opacity: secondOpacity }"
     />
   </div>
+
+  <UButton
+    @click="handleNextPic"
+  >Next</UButton>
+
 </template>
 
 <style scoped>
