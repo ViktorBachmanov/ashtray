@@ -6,6 +6,8 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
 
   image: {
-    provider: 'ipxStatic',
+    vercel: {
+      provider: 'ipx'
+    }
   }
 })
