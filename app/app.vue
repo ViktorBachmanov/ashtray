@@ -45,13 +45,13 @@
           </h2>
 
           <video
-            width="700"
+            width="890"
             muted
             playsinline
             controls
-            src="/video/full-1.webm"
+            src="/video/set-10.webm"
             class="mx-auto"
-            poster="/images/semi-finish-traj.png"
+            poster="/images/mach-poster-2.png"
           >
           </video>
         </div>
@@ -93,6 +93,11 @@
       </section>
       
       </main>
+
+      <footer class="flex justify-evenly border-top pb-20">
+        <span>Инженер-конструктор, технолог-программист, оператор-наладчик ЧПУ: Бачманов Виктор</span>
+        <span>Материал: Алюминий</span>
+      </footer>
   </UApp>
 </template>
 
