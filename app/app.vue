@@ -14,7 +14,7 @@
         Изделие «Пепельница»
       </h1>    
        
-      <table class="m-8">
+      <!-- <table class="m-8">
         <tbody>
           <tr>
             <td class="text-right">Автор:</td>
@@ -25,7 +25,7 @@
             <td>Алюминий</td>
           </tr>
         </tbody>
-      </table>
+      </table> -->
 
       <Carousel />
 
