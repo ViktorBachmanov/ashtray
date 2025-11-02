@@ -20,7 +20,7 @@
         class="flex flex-col items-center gap-10 px-2"
       >
         <div class="max-w-[890px] drop-shadow-2xl  rounded-t-xl">
-          <h2 class="text-2xl font-medium indent-3 p-2">
+          <h2 class="text-xl sm:text-2xl font-medium indent-3 p-2">
             Дизайн и построение <span class="whitespace-nowrap">3D-модели</span>
           </h2>
 
@@ -28,7 +28,7 @@
         </div>
 
         <div class="shadow-2xl  rounded-t-xl ">
-          <h2 class="text-2xl font-medium indent-3 p-2">
+          <h2 class="text-xl sm:text-2xl font-medium indent-3 p-2">
             Симуляция черновой и получистовой обработки
           </h2>
 
@@ -62,7 +62,7 @@
         </div> -->
 
         <div class="shadow-2xl rounded-t-xl">
-          <h2 class="text-2xl font-medium indent-3 my-4 ">
+          <h2 class="text-xl sm:text-2xl font-medium indent-3 my-4 ">
             Готовое изделие
           </h2>
 
