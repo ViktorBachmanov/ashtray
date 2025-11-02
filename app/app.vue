@@ -35,8 +35,6 @@
           <video
             width="890"
             muted
-            autoplay
-            loop
             playsinline
             controls
             src="/video/set-10.webm"
@@ -86,9 +84,9 @@
 
       <footer class="flex flex-col items-center border-t-1 border-gray-300 pt-12 pb-16">
         <table>
-          <caption  class="text-center text-xl font-medium tracking-wide pb-5">
+          <!-- <caption  class="text-center text-xl font-medium tracking-wide pb-5">
             В ролях:
-          </caption>
+          </caption> -->
           
           <tbody>
             <tr>
@@ -104,7 +102,7 @@
               <td>Владимирович</td>
             </tr>
             <tr>
-              <td></td>
+              <td class="h-6"></td>
               <td></td>
             </tr>
             <tr>
@@ -124,7 +122,7 @@ th {
 }
 
 td {
-  padding: 0.33em;
+  padding: 0.2em;
 }
 
 th:first-child, td:first-child {
