@@ -13,7 +13,7 @@
       <h1
         class="text-3xl font-medium text-center leading-12 mb-8 -mt-4"
       >
-        Пепельница<br>«Юбилейная»
+        Пепельница
       </h1>    
 
       <section
@@ -24,7 +24,7 @@
             Дизайн и построение <span class="whitespace-nowrap">3D-модели</span>
           </h2>
 
-          <Carousel class="" />
+          <Carousel />
         </div>
 
         <div class="shadow-2xl  rounded-t-xl ">
@@ -69,7 +69,7 @@
           </h2>
 
           <NuxtImg
-            src="/images/IMG_20181117_140947_BURST1.jpg"
+            src="/images/photo.jpg"
             :modifiers="{
               extract: '800_480_2300_1640'
             }"
