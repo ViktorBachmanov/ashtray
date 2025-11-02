@@ -75,6 +75,8 @@ watch(curPicIndex, newIndex => {
   // nextSrc.value = getSrc(nextIndex)
 
   toggleSecondOpacity()
+}, {
+  flush: 'post',
 })
 
 let intervalId
