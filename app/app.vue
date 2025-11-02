@@ -101,16 +101,21 @@
               <td>Фрезеровка на станке <span class="whitespace-nowrap">AWEA</span></td>
               <td>Владимирович</td>
             </tr>
-            <tr>
+            <!-- <tr>
               <td class="h-6"></td>
               <td></td>
             </tr>
             <tr>
               <td>Материал</td>
               <td>Алюминий</td>
-            </tr>
+            </tr> -->
           </tbody>
         </table>
+
+        <div class="text-center mt-8">
+          Материал
+          <span class="ml-4">Алюминий</span>
+        </div>
 
       </footer>
   </UApp>
