@@ -21,21 +21,21 @@ const curPicIndex = ref(lastPicIndex.value)
 const firstPic = ref(designPictures[curPicIndex.value])
 const secondPic = ref(designPictures[curPicIndex.value - 1])
 
-function setPicIndex(val) {
-  curPicIndex.value = val
-}
+// function setPicIndex(val) {
+//   curPicIndex.value = val
+// }
 
-const curSrc = ref('')
+// const curSrc = ref('')
 // const prevSrc = ref('')
-const nextSrc = ref('')
+// const nextSrc = ref('')
 
-const secondOpacity = ref(0)
+// const secondOpacity = ref(0)
 
-function toggleSecondOpacity() {
-  secondOpacity.value = secondOpacity.value === 0
-    ? 1
-    : 0
-}
+// function toggleSecondOpacity() {
+//   secondOpacity.value = secondOpacity.value === 0
+//     ? 1
+//     : 0
+// }
 
 // const img = useImage()
 
@@ -86,20 +86,22 @@ onMounted(() => {
 
 onUnmounted(() => clearInterval(intervalId))
 
+const secondPicVisible = ref(false)
+
 async function handlePrevPic() {
   if (isFirstIndex.value) return
 
   curPicIndex.value--
   await new Promise(res => setTimeout(res))  
 
-  if (secondOpacity.value) {
+  if (secondPicVisible.value) {
     firstPic.value = designPictures[curPicIndex.value]
   } else {
     secondPic.value = designPictures[curPicIndex.value]
   }
 
   await new Promise(res => setTimeout(res))  
-  toggleSecondOpacity()
+  toggleSecondVisibility()
 }
 
 async function handleNextPic() {
@@ -108,14 +110,18 @@ async function handleNextPic() {
   curPicIndex.value++
   await new Promise(res => setTimeout(res))  
 
-  if(secondOpacity.value) {
+  if(secondPicVisible.value) {
     firstPic.value = designPictures[curPicIndex.value]
   } else {
     secondPic.value = designPictures[curPicIndex.value]
   }
 
   await new Promise(res => setTimeout(res))  
-  toggleSecondOpacity()
+  toggleSecondVisibility()
+}
+
+function toggleSecondVisibility() {
+  secondPicVisible.value = !secondPicVisible.value
 }
 
 const isFirstIndex = computed(() => curPicIndex.value === 0)
@@ -143,15 +149,18 @@ const shade = ref(true)
       :height="firstPic.height"
     />
 
-    <DesignPicture
-      :src="secondPic.src"
-      :name="secondPic.title"
-      :top="secondPic.top"
-      :left="secondPic.left"
-      :height="secondPic.height"
-      class="absolute inset-0 op"
-      :style="{ opacity: secondOpacity }"
-    />
+    <Transition
+      v-show="secondPicVisible"
+    >
+      <DesignPicture
+        :src="secondPic.src"
+        :name="secondPic.title"
+        :top="secondPic.top"
+        :left="secondPic.left"
+        :height="secondPic.height"
+        class="absolute inset-0"
+      />
+    </Transition>
   </div>
 
   <div
@@ -176,7 +185,17 @@ const shade = ref(true)
 </template>
 
 <style scoped>
-.op {
+/* .op {
   transition: opacity 1s ease;
+} */
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 1s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }
 </style>
