@@ -60,25 +60,6 @@ function toggleSecondOpacity() {
 //   return image.src
 // } 
 
-
-watch(curPicIndex, async () => {
-  // let prevIndex = newIndex - 1
-  // if(prevIndex < 0) {
-  //   prevIndex = designPictures.length - 1
-  // }
-  // let nextIndex = newIndex + 1
-  // if(nextIndex > designPictures.length - 1) {
-  //   nextIndex = 0
-  // }
-
-  // curSrc.value = getSrc(newIndex)
-  // nextSrc.value = getSrc(nextIndex)
-
-  await new Promise(res => setTimeout(res))
-  
-  toggleSecondOpacity()
-})
-
 let intervalId
 
 let playDirection = 'backward'
@@ -86,7 +67,7 @@ let playDirection = 'backward'
 onMounted(() => {
   // curPicIndex.value = 0
 
-  intervalId = setInterval(() => {
+  intervalId = setInterval(async () => {
     if (isFirstIndex.value) {
       playDirection = 'forward' 
     } else if (isLastIndex.value) {
@@ -98,6 +79,10 @@ onMounted(() => {
     } else {
       handlePrevPic()
     }
+
+    await new Promise(res => setTimeout(res))
+  
+    toggleSecondOpacity()
   }, 3000)
 })
 
@@ -182,6 +167,6 @@ const shade = ref(true)
 
 <style scoped>
 .op {
-  transition: opacity 1s linear;
+  transition: opacity 1s ease;
 }
 </style>
