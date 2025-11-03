@@ -67,7 +67,7 @@ let playDirection = 'backward'
 onMounted(() => {
   // curPicIndex.value = 0
 
-  intervalId = setInterval(async () => {
+  intervalId = setInterval(() => {
     if (isFirstIndex.value) {
       playDirection = 'forward' 
     } else if (isLastIndex.value) {
@@ -79,33 +79,41 @@ onMounted(() => {
     } else {
       handlePrevPic()
     }
-
-    await new Promise(res => setTimeout(res))
-  
-    toggleSecondOpacity()
   }, 3000)
 })
 
 onUnmounted(() => clearInterval(intervalId))
 
-function handlePrevPic() {
+async function handlePrevPic() {
   if (isFirstIndex.value) return
 
+  curPicIndex.value--
+  await new Promise(res => setTimeout(res))  
+
   if (secondOpacity.value) {
-    firstPic.value = designPictures[--curPicIndex.value]
+    firstPic.value = designPictures[curPicIndex.value]
   } else {
-    secondPic.value = designPictures[--curPicIndex.value]
+    secondPic.value = designPictures[curPicIndex.value]
   }
+
+  await new Promise(res => setTimeout(res))  
+  toggleSecondOpacity()
 }
 
-function handleNextPic() {
+async function handleNextPic() {
   if(isLastIndex.value) return
 
+  curPicIndex.value++
+  await new Promise(res => setTimeout(res))  
+
   if(secondOpacity.value) {
-    firstPic.value = designPictures[++curPicIndex.value]
+    firstPic.value = designPictures[curPicIndex.value]
   } else {
-    secondPic.value = designPictures[++curPicIndex.value]
+    secondPic.value = designPictures[curPicIndex.value]
   }
+
+  await new Promise(res => setTimeout(res))  
+  toggleSecondOpacity()
 }
 
 const isFirstIndex = computed(() => curPicIndex.value === 0)
