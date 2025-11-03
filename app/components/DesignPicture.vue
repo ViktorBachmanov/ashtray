@@ -13,7 +13,8 @@ const props = defineProps({
   height: {
     type: Number,
     default: 750,
-  }
+  },
+  num: Number,
 })
 </script>
 
@@ -21,6 +22,7 @@ const props = defineProps({
   <div
     class="bg-black"
   >
+    <span class="absolute top-2 left-2">{{ num }}</span>
     <div
       class="text-white p-2 absolute right-2 bottom-2"
     >

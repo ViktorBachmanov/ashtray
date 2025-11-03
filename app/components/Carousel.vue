@@ -145,6 +145,7 @@ function handleStop() {
       :top="firstPic.top"
       :left="firstPic.left"
       :height="firstPic.height"
+      :num="1"
     />
 
     <Transition>
@@ -156,6 +157,7 @@ function handleStop() {
         :left="secondPic.left"
         :height="secondPic.height"
         class="absolute inset-0"
+        :num="2"
       />
     </Transition>
   </div>
