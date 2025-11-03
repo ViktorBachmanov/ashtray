@@ -32,7 +32,9 @@ const nextSrc = ref('')
 const secondOpacity = ref(0)
 
 function toggleSecondOpacity() {
-  secondOpacity.value = Math.abs(secondOpacity.value - 1)
+  secondOpacity.value = secondOpacity.value === 0
+    ? 1
+    : 0
 }
 
 // const img = useImage()
