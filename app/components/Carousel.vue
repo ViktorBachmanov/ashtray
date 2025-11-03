@@ -92,7 +92,7 @@ async function handlePrevPic() {
   if (isFirstIndex.value) return
 
   curPicIndex.value--
-  await new Promise(res => setTimeout(res))  
+  // await new Promise(res => setTimeout(res))  
 
   if (secondPicVisible.value) {
     firstPic.value = designPictures[curPicIndex.value]
@@ -100,7 +100,7 @@ async function handlePrevPic() {
     secondPic.value = designPictures[curPicIndex.value]
   }
 
-  await new Promise(res => setTimeout(res))  
+  // await new Promise(res => setTimeout(res))  
   toggleSecondVisibility()
 }
 
@@ -108,7 +108,7 @@ async function handleNextPic() {
   if(isLastIndex.value) return
 
   curPicIndex.value++
-  await new Promise(res => setTimeout(res))  
+  // await new Promise(res => setTimeout(res))  
 
   if(secondPicVisible.value) {
     firstPic.value = designPictures[curPicIndex.value]
@@ -116,7 +116,7 @@ async function handleNextPic() {
     secondPic.value = designPictures[curPicIndex.value]
   }
 
-  await new Promise(res => setTimeout(res))  
+  // await new Promise(res => setTimeout(res))  
   toggleSecondVisibility()
 }
 
