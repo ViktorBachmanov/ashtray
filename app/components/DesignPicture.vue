@@ -43,7 +43,7 @@ function handleOnload() {
       width="700"
       height="620"
       sizes="90vw sm:700px"
-      class="max-w-full max-h-screen mx-auto border-emerald-600 border object-contain"
+      class="max-w-full max-h-screen object-contain mx-auto border-emerald-600 border"
       format="webp"
       @load="handleOnload"
     />

@@ -77,7 +77,7 @@
               }"
               width="3800"
               sizes="90vw sm:700"
-              class="sm:w-[700px] mx-auto max-h-screen"
+              class="sm:w-[700px] mx-auto max-h-screen object-contain"
               format="webp"
               alt="Фото"
               loading="lazy"
