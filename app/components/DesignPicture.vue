@@ -4,15 +4,15 @@ const props = defineProps({
   name: String,
   left: {
     type: Number,
-    default: 200,
+    default: 260,
   },
   top: {
     type: Number,
-    default: 50,
+    default: 0,
   },
   height: {
     type: Number,
-    default: 750,
+    default: 850,
   },
   // num: Number,
 })
@@ -38,11 +38,11 @@ function handleOnload() {
     <NuxtImg
       :src
       :modifiers="{
-        extract: `${props.left}_${props.top}_800_${props.height}`
+        extract: `${props.left}_${props.top}_700_${props.height}`
       }"
-      width="1100"
-      height="859"
-      sizes="90vw sm:890px"
+      width="700"
+      height="620"
+      sizes="90vw sm:700px"
       class="max-w-full max-h-screen mx-auto border-emerald-600 border object-contain"
       format="webp"
       @load="handleOnload"

@@ -33,7 +33,7 @@
           </h2>
 
           <video
-            width="890"
+            width="700"
             muted
             playsinline
             controls
@@ -66,18 +66,23 @@
             Готовое изделие
           </h2>
 
-          <NuxtImg
-            src="/images/photo.jpg"
-            :modifiers="{
-              extract: '800_480_2300_1640'
-            }"
-            width="3800"
-            sizes="90vw sm:890"
-            class="sm:w-[890px] mx-auto max-h-screen"
-            format="webp"
-            alt="Фото"
-            loading="lazy"
-          />
+          <NuxtLink
+            to="/_ipx/extract_800_480_2300_1640&w_2300&f_webp/images/photo.jpg"
+            target="_blank"
+          >
+            <NuxtImg
+              src="/images/photo.jpg"
+              :modifiers="{
+                extract: '800_480_2300_1640'
+              }"
+              width="3800"
+              sizes="90vw sm:700"
+              class="sm:w-[700px] mx-auto max-h-screen"
+              format="webp"
+              alt="Фото"
+              loading="lazy"
+            />
+          </NuxtLink>
         </div>
       </section>
       
