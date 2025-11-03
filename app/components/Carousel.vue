@@ -92,7 +92,7 @@ async function handlePrevPic() {
   if (isFirstIndex.value) return
 
   curPicIndex.value--
-  nextTick()
+  // nextTick()
   // await new Promise(res => setTimeout(res))  
 
   if (secondPicVisible.value) {
@@ -101,16 +101,16 @@ async function handlePrevPic() {
     secondPic.value = designPictures[curPicIndex.value]
   }
 
-  nextTick()
+  // nextTick()
   // await new Promise(res => setTimeout(res))  
-  toggleSecondVisibility()
+  // toggleSecondVisibility()
 }
 
 async function handleNextPic() {
   if(isLastIndex.value) return
 
   curPicIndex.value++
-  nextTick()
+  // nextTick()
   // await new Promise(res => setTimeout(res))  
 
   if(secondPicVisible.value) {
@@ -119,12 +119,13 @@ async function handleNextPic() {
     secondPic.value = designPictures[curPicIndex.value]
   }
 
-  nextTick()
+  // nextTick()
   // await new Promise(res => setTimeout(res))  
-  toggleSecondVisibility()
+  // toggleSecondVisibility()
 }
 
 function toggleSecondVisibility() {
+  console.log('toggleSecondVisibility')
   secondPicVisible.value = !secondPicVisible.value
 }
 
@@ -137,6 +138,8 @@ function handleStop() {
   clearInterval(intervalId)
   stopped.value = true
 }
+
+const secondOpacity = computed(() => secondPicVisible.value ? 1 : 0)
 </script>
 
 <template>
@@ -150,20 +153,22 @@ function handleStop() {
       :left="firstPic.left"
       :height="firstPic.height"
       :num="1"
+      @loaded="toggleSecondVisibility"
     />
 
-    <Transition>
+    <!-- <Transition> -->
       <DesignPicture
-        v-if="secondPicVisible"
         :src="secondPic.src"
         :name="secondPic.title"
         :top="secondPic.top"
         :left="secondPic.left"
         :height="secondPic.height"
-        class="absolute inset-0"
+        class="absolute inset-0 op"
         :num="2"
+        @loaded="toggleSecondVisibility"
+        :style="{ opacity: secondOpacity }"
       />
-    </Transition>
+    <!-- </Transition> -->
   </div>
 
   <div
@@ -188,11 +193,11 @@ function handleStop() {
 </template>
 
 <style scoped>
-/* .op {
+.op {
   transition: opacity 1s ease;
-} */
+}
 
-.v-enter-active,
+/* .v-enter-active,
 .v-leave-active {
   transition: opacity 1s ease;
 }
@@ -200,5 +205,5 @@ function handleStop() {
 .v-enter-from,
 .v-leave-to {
   opacity: 0;
-}
+} */
 </style>
