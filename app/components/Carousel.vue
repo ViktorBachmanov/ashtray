@@ -159,22 +159,32 @@ function handleStop() {
   </div>
 
   <div
-    class="mt-2 flex gap-2"
+    class="mt-2 flex gap-2 items-center"
   >
-    <UButton
+    <IconChevronDeg
       @click="handlePrevPic"
       :disabled="isFirstIndex"
-    >Prev</UButton>
+      :angle="180"
+      class="text-[#05df72]"
+    />
 
-    <UButton
-      @click="handleNextPic"
-      :disabled="isLastIndex"
-    >Next</UButton>
-
-    <UButton
+    <IconStop
       @click="handleStop"
       :disabled="stopped"
-    >Stop</UButton>
+      class="text-[#05df72] w-12 h-12"
+    />
+
+    <IconChevronDeg
+      @click="handleNextPic"
+      :disabled="isLastIndex"
+      class="text-[#05df72]"
+    />
+
+    <div
+      v-for="(stage, index) in designPictures"
+      class="min-h-2 min-w-2 bg-emerald-600"
+    >
+    </div>
   </div>
 
 </template>
