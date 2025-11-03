@@ -11,7 +11,7 @@
       </div>
 
       <h1
-        class="text-3xl font-medium text-center leading-12 mb-8 -mt-4"
+        class="text-3xl font-medium text-center leading-12 mb-4 sm:mb-8 -mt-4"
       >
         Пепельница
       </h1>    
