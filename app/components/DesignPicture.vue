@@ -14,7 +14,7 @@ const props = defineProps({
     type: Number,
     default: 750,
   },
-  num: Number,
+  // num: Number,
 })
 
 const emit = defineEmits(['loaded'])
@@ -29,7 +29,6 @@ function handleOnload() {
   <div
     class="bg-black"
   >
-    <span class="absolute top-2 left-2">{{ num }}</span>
     <div
       class="text-white p-2 absolute right-2 bottom-2"
     >
@@ -44,7 +43,7 @@ function handleOnload() {
       width="1100"
       height="859"
       sizes="90vw sm:890px"
-      class="max-w-full mx-auto border-emerald-600 border"
+      class="max-w-full max-h-screen mx-auto border-emerald-600 border object-contain"
       format="webp"
       @load="handleOnload"
     />

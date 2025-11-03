@@ -139,7 +139,6 @@ function handleStop() {
       :top="firstPic.top"
       :left="firstPic.left"
       :height="firstPic.height"
-      :num="1"
       @loaded="toggleSecondVisibility"
       :key="firstPic"
     />
@@ -153,7 +152,6 @@ function handleStop() {
         :left="secondPic.left"
         :height="secondPic.height"
         class="absolute inset-0 "
-        :num="2"
         @loaded="toggleSecondVisibility"
         :key="secondPic"
       />

@@ -38,7 +38,7 @@
             playsinline
             controls
             src="/video/set-10.webm"
-            class="mx-auto"
+            class="mx-auto max-h-screen"
             poster="/images/mach-poster-2.png"
           >
           </video>
@@ -73,7 +73,7 @@
             }"
             width="3800"
             sizes="90vw sm:890"
-            class="sm:w-[890px] mx-auto"
+            class="sm:w-[890px] mx-auto max-h-screen"
             format="webp"
             alt="Фото"
             loading="lazy"
