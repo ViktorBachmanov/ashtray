@@ -83,11 +83,7 @@
       </main>
 
       <footer class="flex flex-col items-center border-t-1 border-gray-300 pt-12 pb-16">
-        <table>
-          <!-- <caption  class="text-center text-xl font-medium tracking-wide pb-5">
-            В ролях:
-          </caption> -->
-          
+        <table>          
           <tbody>
             <tr>
               <td>Дизайн <span class="whitespace-nowrap">3D-модели</span></td>
@@ -101,14 +97,6 @@
               <td>Фрезеровка на станке <span class="whitespace-nowrap">AWEA</span></td>
               <td>Владимирович</td>
             </tr>
-            <!-- <tr>
-              <td class="h-6"></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Материал</td>
-              <td>Алюминий</td>
-            </tr> -->
           </tbody>
         </table>
 

@@ -1,13 +1,13 @@
 <script setup>
 const designPictures = [
   { title: 'Опорные кривые', src: '/images/3.jpg', left: 140, top: 80, height: 700, },
-  { title: 'Лоскут-Восьмушка', src: '/images/4.jpg', left: 140, top: 80, height: 700, },
+  { title: 'Лоскут-1/8', src: '/images/4.jpg', left: 140, top: 80, height: 700, },
   { title: 'Зеркальная копия', src: '/images/5.jpg', left: 140, top: 60, },
   { title: 'Сшивка', src: '/images/7.jpg', left: 140, top: 60, },
-  { title: 'Лоскут-Четверть', src: '/images/6.jpg', left: 140, top: 60, },
-  { title: 'Четыре четверти', src: '/images/8.jpg', left: 150, top: 60, },
+  { title: 'Лоскут-1/4', src: '/images/6.jpg', left: 140, top: 60, },
+  { title: '4/4', src: '/images/8.jpg', left: 150, top: 60, },
   { title: 'Сшивка', src: '/images/9.jpg', left: 150, top: 60, },
-  { title: 'Готовая опорная поверхность', src: '/images/10.jpg', left: 150, top: 60, },
+  { title: 'Опорная поверхность', src: '/images/10.jpg', left: 150, top: 60, },
   { title: 'Отверждение', src: '/images/12.jpg', left: 140, top: 50, },
   { title: 'Каркас', src: '/images/15.jpg' },
   { title: 'Технологические лыски', src: '/images/13.jpg' },
@@ -61,7 +61,7 @@ function toggleSecondOpacity() {
 // } 
 
 
-watch(curPicIndex, newIndex => {
+watch(curPicIndex, async () => {
   // let prevIndex = newIndex - 1
   // if(prevIndex < 0) {
   //   prevIndex = designPictures.length - 1
@@ -74,9 +74,9 @@ watch(curPicIndex, newIndex => {
   // curSrc.value = getSrc(newIndex)
   // nextSrc.value = getSrc(nextIndex)
 
+  await new Promise(res => setTimeout(res))
+  
   toggleSecondOpacity()
-}, {
-  flush: 'post',
 })
 
 let intervalId
@@ -182,6 +182,6 @@ const shade = ref(true)
 
 <style scoped>
 .op {
-  transition: opacity 1s ease
+  transition: opacity 1s linear;
 }
 </style>
