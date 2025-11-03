@@ -133,8 +133,6 @@ function handleStop() {
   clearInterval(intervalId)
   stopped.value = true
 }
-
-const shade = ref(true)
 </script>
 
 <template>
@@ -149,10 +147,9 @@ const shade = ref(true)
       :height="firstPic.height"
     />
 
-    <Transition
-      v-show="secondPicVisible"
-    >
+    <Transition>
       <DesignPicture
+        v-if="secondPicVisible"
         :src="secondPic.src"
         :name="secondPic.title"
         :top="secondPic.top"
