@@ -182,8 +182,8 @@ function handleStop() {
 
     <div
       v-for="(stage, index) in designPictures"
-      class="min-h-2 min-w-2 bg-emerald-600 grow"
-      :class="{ '!bg-[#05df72]': curPicIndex > index - 1 }"
+      class="min-h-2 min-w-2 bg-[#05df72] grow"
+      :class="{ 'opacity-25': curPicIndex <= index - 1 }"
     >
     </div>
   </div>
