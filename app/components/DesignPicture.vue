@@ -20,7 +20,7 @@ const props = defineProps({
 const emit = defineEmits(['loaded'])
 
 function handleOnload() {
-  console.log('handleOnload')
+  // console.log('handleOnload')
   emit('loaded')
 }
 </script>

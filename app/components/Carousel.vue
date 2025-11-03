@@ -19,7 +19,7 @@ const lastPicIndex = computed(() => designPictures.length - 1)
 const curPicIndex = ref(lastPicIndex.value)
 
 const firstPic = ref(designPictures[curPicIndex.value])
-const secondPic = ref(designPictures[curPicIndex.value - 1])
+const secondPic = ref(designPictures[curPicIndex.value])
 
 // function setPicIndex(val) {
 //   curPicIndex.value = val
@@ -92,40 +92,27 @@ async function handlePrevPic() {
   if (isFirstIndex.value) return
 
   curPicIndex.value--
-  // nextTick()
-  // await new Promise(res => setTimeout(res))  
 
   if (secondPicVisible.value) {
-    firstPic.value = designPictures[curPicIndex.value]
+    firstPic.value = { ...designPictures[curPicIndex.value] }
   } else {
-    secondPic.value = designPictures[curPicIndex.value]
+    secondPic.value = { ...designPictures[curPicIndex.value] }
   }
-
-  // nextTick()
-  // await new Promise(res => setTimeout(res))  
-  // toggleSecondVisibility()
 }
 
 async function handleNextPic() {
   if(isLastIndex.value) return
 
   curPicIndex.value++
-  // nextTick()
-  // await new Promise(res => setTimeout(res))  
 
   if(secondPicVisible.value) {
-    firstPic.value = designPictures[curPicIndex.value]
+    firstPic.value = { ...designPictures[curPicIndex.value] }
   } else {
-    secondPic.value = designPictures[curPicIndex.value]
+    secondPic.value = { ...designPictures[curPicIndex.value] }
   }
-
-  // nextTick()
-  // await new Promise(res => setTimeout(res))  
-  // toggleSecondVisibility()
 }
 
 function toggleSecondVisibility() {
-  console.log('toggleSecondVisibility')
   secondPicVisible.value = !secondPicVisible.value
 }
 
@@ -139,7 +126,7 @@ function handleStop() {
   stopped.value = true
 }
 
-const secondOpacity = computed(() => secondPicVisible.value ? 1 : 0)
+// const secondOpacity = computed(() => secondPicVisible.value ? 1 : 0)
 </script>
 
 <template>
@@ -154,21 +141,23 @@ const secondOpacity = computed(() => secondPicVisible.value ? 1 : 0)
       :height="firstPic.height"
       :num="1"
       @loaded="toggleSecondVisibility"
+      :key="firstPic"
     />
 
-    <!-- <Transition> -->
+    <Transition>
       <DesignPicture
+        v-show="secondPicVisible"
         :src="secondPic.src"
         :name="secondPic.title"
         :top="secondPic.top"
         :left="secondPic.left"
         :height="secondPic.height"
-        class="absolute inset-0 op"
+        class="absolute inset-0 "
         :num="2"
         @loaded="toggleSecondVisibility"
-        :style="{ opacity: secondOpacity }"
+        :key="secondPic"
       />
-    <!-- </Transition> -->
+    </Transition>
   </div>
 
   <div
@@ -193,11 +182,11 @@ const secondOpacity = computed(() => secondPicVisible.value ? 1 : 0)
 </template>
 
 <style scoped>
-.op {
+/* .op {
   transition: opacity 1s ease;
-}
+} */
 
-/* .v-enter-active,
+.v-enter-active,
 .v-leave-active {
   transition: opacity 1s ease;
 }
@@ -205,5 +194,5 @@ const secondOpacity = computed(() => secondPicVisible.value ? 1 : 0)
 .v-enter-from,
 .v-leave-to {
   opacity: 0;
-} */
+}
 </style>

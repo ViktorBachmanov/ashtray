@@ -76,6 +76,7 @@
             class="sm:w-[890px] mx-auto"
             format="webp"
             alt="Фото"
+            loading="lazy"
           />
         </div>
       </section>
