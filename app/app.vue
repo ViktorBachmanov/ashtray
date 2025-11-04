@@ -32,7 +32,7 @@ useHead({
       </h1>    
 
       <section
-        class="flex flex-wrap items-center justify-center gap-10 px-2"
+        class="flex flex-wrap items-start justify-center gap-10 px-2"
       >
         <div class="max-w-[890px] drop-shadow-2xl  rounded-t-xl">
           <h2 class="text-xl sm:text-2xl font-medium indent-3 p-2">
