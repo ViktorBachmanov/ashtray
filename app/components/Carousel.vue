@@ -3,7 +3,7 @@ const designPictures = [
   { title: 'Опорные кривые', src: '/images/3.jpg', left: 200, top: 90, height: 700, },
   { title: 'Лоскут-1/8', src: '/images/4.jpg', left: 200, top: 90, height: 700, },
   { title: 'Зеркальная копия', src: '/images/5.jpg', left: 200, top: 10, height: 840 },
-  { title: 'Сшивка', src: '/images/7.jpg', left: 200 },
+  { title: 'Сшивка', src: '/images/7.jpg', left: 200, top: 10, height: 840 },
   { title: 'Лоскут-1/4', src: '/images/6.jpg', left: 200, top: 10, height: 840 },
   { title: '4/4', src: '/images/8.jpg', left: 200 },
   { title: 'Сшивка', src: '/images/9.jpg', left: 200 },
