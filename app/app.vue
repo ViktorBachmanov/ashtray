@@ -12,9 +12,9 @@ useHead({
 
 <template>
   <UApp>
-    <main class="max-v-[100vw] md:max-w-[1000px] mx-auto pb-14 mt-4">
-      <div class="pt-2 px-4 flex items-center justify-between sm:gap-4">
-        <UColorModeButton />
+    <main class="max-v-[100vw] mx-auto pb-14 mt-4">
+      <div class="pt-2 px-4 flex items-center justify-between sm:gap-4 max-w-[1400px] mx-auto">
+        <UColorModeButton class="cursor-pointer" />
 
         <NuxtLink
           to="https://github.com/ViktorBachmanov/ashtray"
@@ -32,7 +32,7 @@ useHead({
       </h1>    
 
       <section
-        class="flex flex-col items-center gap-10 px-2"
+        class="flex flex-wrap items-center justify-center gap-10 px-2"
       >
         <div class="max-w-[890px] drop-shadow-2xl  rounded-t-xl">
           <h2 class="text-xl sm:text-2xl font-medium indent-3 p-2">
@@ -54,7 +54,7 @@ useHead({
             controls
             preload="none"
             src="/video/set-10.webm"
-            class="mx-auto max-h-screen"
+            class="mx-auto max-h-[90vh] md:w-[40vw]"
             poster="/images/mach-poster-2.png"
           >
           </video>
@@ -104,12 +104,13 @@ useHead({
       
       </main>
 
-      <footer class="flex flex-col items-center border-t-1 border-gray-300 pt-10 pb-16">
+      <footer class="flex flex-col items-center border-t-1 border-gray-300 pt-10 pb-16 max-w-[800px] mx-auto">
         <div class="flex items-center">
           <ul>
             <li>Дизайн <span class="whitespace-nowrap">3D-модели</span></li>
             <li>ЧПУ - программы</li>
             <li>Фрезеровка на станке</li>
+            <li>Этот сайт</li>
           </ul>
 
           <div class="border border-l-0 min-w-2 ml-3 rounded-tr-lg rounded-br-lg py-3 self-stretch"></div>
