@@ -92,8 +92,8 @@ useHead({
                 extract: '800_480_2300_1640'
               }"
               width="3800"
-              sizes="90vw sm:700"
-              class="sm:w-[700px] mx-auto max-h-screen object-contain"
+              sizes="90vw sm:800"
+              class="sm:w-[800px] mx-auto max-h-screen object-contain"
               format="webp"
               alt="Фото"
               loading="lazy"
@@ -104,7 +104,7 @@ useHead({
       
       </main>
 
-      <footer class="flex flex-col items-center border-t-1 border-gray-300 pt-10 pb-16 max-w-[800px] mx-auto">
+      <footer class="flex flex-col items-center border-t-1 border-gray-300 pt-10 pb-16 max-w-[600px] mx-auto">
         <div class="flex items-center">
           <ul>
             <li>Дизайн <span class="whitespace-nowrap">3D-модели</span></li>
