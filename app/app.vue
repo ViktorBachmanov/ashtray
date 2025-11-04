@@ -13,7 +13,7 @@ useHead({
 <template>
   <UApp>
     <main class="max-v-[100vw] md:max-w-[1000px] mx-auto pb-14 mt-4">
-      <div class="pt-2 pr-4 flex items-center justify-end gap-2 sm:gap-4">
+      <div class="pt-2 px-4 flex items-center justify-between sm:gap-4">
         <UColorModeButton />
 
         <NuxtLink
