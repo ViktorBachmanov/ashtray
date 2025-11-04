@@ -98,19 +98,6 @@ useHead({
 
       <footer class="flex flex-col items-center border-t-1 border-gray-300 pt-10 pb-16">
         <div class="flex items-center">
-          <!-- <table>          
-            <tbody>
-              <tr>
-                <td>Дизайн <span class="whitespace-nowrap">3D-модели</span></td>
-              </tr>
-              <tr>
-                <td>Программирование ЧПУ</td>
-              </tr>
-              <tr>
-                <td>Фрезеровка на станке <span class="whitespace-nowrap">AWEA</span></td>
-              </tr>
-            </tbody>
-          </table> -->
           <ul>
             <li>Дизайн <span class="whitespace-nowrap">3D-модели</span></li>
             <li>ЧПУ - программы</li>
@@ -118,7 +105,6 @@ useHead({
           </ul>
 
           <div class="border border-l-0 min-w-2 ml-3 rounded-tr-lg rounded-br-lg py-3 self-stretch"></div>
-          <!-- <div class="-ml-[3px] -mt-[3px] opacity-75">&#9658;</div> -->
 
           <div class="ml-3">Бачманов В.В.</div>
         </div>
@@ -152,7 +138,5 @@ th:first-child, td:first-child {
 
 ul {
   text-align: right;
-  /* list-style-type: circle; 
-  direction: rtl; */
 }
 </style>

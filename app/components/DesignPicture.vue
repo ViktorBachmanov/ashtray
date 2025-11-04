@@ -14,13 +14,11 @@ const props = defineProps({
     type: Number,
     default: 850,
   },
-  // num: Number,
 })
 
 const emit = defineEmits(['loaded'])
 
 function handleOnload() {
-  // console.log('handleOnload')
   emit('loaded')
 }
 </script>
@@ -47,11 +45,5 @@ function handleOnload() {
       format="webp"
       @load="handleOnload"
     />
-
-    <!-- <img 
-      :src 
-      width='1100'
-      height='859'
-    /> -->
   </div>
 </template>

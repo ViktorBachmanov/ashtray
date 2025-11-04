@@ -21,54 +21,11 @@ const curPicIndex = ref(lastPicIndex.value)
 const firstPic = ref(designPictures[curPicIndex.value])
 const secondPic = ref(designPictures[curPicIndex.value])
 
-// function setPicIndex(val) {
-//   curPicIndex.value = val
-// }
-
-// const curSrc = ref('')
-// const prevSrc = ref('')
-// const nextSrc = ref('')
-
-// const secondOpacity = ref(0)
-
-// function toggleSecondOpacity() {
-//   secondOpacity.value = secondOpacity.value === 0
-//     ? 1
-//     : 0
-// }
-
-// const img = useImage()
-
-// function getSrc(index) {
-//   const image = new Image()
-//   console.log('Image:', image);
-//   console.log('index:', index);
-
-//   image.onload = function () {
-//     console.log('Image loaded successfully!');
-//   }
-
-//   const modifiers = {
-//     extract: `${designPictures[index].left ?? 200}_${designPictures[index].top ?? 50}_800_${designPictures[index].height ?? 750}`,
-//   }
-
-//   const options = {
-//     width: 1100,
-//     height: 859,
-//   }
-
-//   image.src = img(designPictures[index].src, modifiers)
-
-//   return image.src
-// } 
-
 let intervalId
 
 let playDirection = 'backward'
 
 onMounted(() => {
-  // curPicIndex.value = 0
-
   intervalId = setInterval(() => {
     if (isFirstIndex.value) {
       playDirection = 'forward' 
