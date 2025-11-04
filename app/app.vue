@@ -1,6 +1,13 @@
 <script setup>
+const origin = import.meta.env.VITE_ORIGIN
 
+const isWorkDomain = origin === 'https://ashtray.cnc-op.ru' 
 
+useHead({
+  meta: [
+    isWorkDomain ? { name: 'yandex-verification', content: 'cdd397d6fd8a12b1' } : { },
+  ]
+})
 </script>
 
 <template>
@@ -112,7 +119,7 @@
           <div class="border border-l-0 min-w-2 ml-3 rounded-tr-lg rounded-br-lg py-3 self-stretch"></div>
           <!-- <div class="-ml-[3px] -mt-[3px] opacity-75">&#9658;</div> -->
 
-          <div class="ml-3">Бачманов Виктор</div>
+          <div class="ml-3">Бачманов В. В.</div>
         </div>
 
         <div class="text-center mt-8">
