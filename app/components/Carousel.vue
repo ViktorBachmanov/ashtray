@@ -1,10 +1,10 @@
 <script setup>
 const designPictures = [
-  { title: 'Опорные кривые', src: '/images/3.jpg', left: 200, top: 100, height: 700, },
-  { title: 'Лоскут-1/8', src: '/images/4.jpg', left: 200, top: 100, height: 700, },
-  { title: 'Зеркальная копия', src: '/images/5.jpg', left: 200 },
+  { title: 'Опорные кривые', src: '/images/3.jpg', left: 200, top: 90, height: 700, },
+  { title: 'Лоскут-1/8', src: '/images/4.jpg', left: 200, top: 90, height: 700, },
+  { title: 'Зеркальная копия', src: '/images/5.jpg', left: 200, top: 10, height: 840 },
   { title: 'Сшивка', src: '/images/7.jpg', left: 200 },
-  { title: 'Лоскут-1/4', src: '/images/6.jpg', left: 200 },
+  { title: 'Лоскут-1/4', src: '/images/6.jpg', left: 200, top: 10, height: 840 },
   { title: '4/4', src: '/images/8.jpg', left: 200 },
   { title: 'Сшивка', src: '/images/9.jpg', left: 200 },
   { title: 'Опорная поверхность', src: '/images/10.jpg', left: 200 },
@@ -84,6 +84,19 @@ function handleStop() {
 }
 
 // const secondOpacity = computed(() => secondPicVisible.value ? 1 : 0)
+
+function handleSetStage(index) {
+  setStage(index)
+}
+
+function setStage(index) {
+  curPicIndex.value = index
+  if(secondPicVisible.value) {
+    firstPic.value = { ...designPictures[index] }
+  } else {
+    secondPic.value = { ...designPictures[index] }
+  }
+}
 </script>
 
 <template>
@@ -139,8 +152,9 @@ function handleStop() {
 
     <div
       v-for="(stage, index) in designPictures"
-      class="min-h-2 min-w-2 bg-[#05df72] grow"
+      class="min-h-4 min-w-2 bg-[#05df72] grow cursor-pointer"
       :class="{ 'opacity-25': curPicIndex <= index - 1 }"
+      @click="handleSetStage(index)"
     >
     </div>
   </div>
