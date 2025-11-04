@@ -13,8 +13,16 @@ useHead({
 <template>
   <UApp>
     <main class="max-v-[100vw] md:max-w-[1000px] mx-auto pb-14 mt-4">
-      <div class="flex justify-end min-h-10">
-        <UColorModeButton class="mt-2 mr-4" />
+      <div class="pt-2 pr-4 flex items-center justify-end gap-2 sm:gap-4">
+        <UColorModeButton />
+
+        <NuxtLink
+          to="https://github.com/ViktorBachmanov/ashtray"
+          target="_blank"
+          class="w-5 h-5"
+        >
+          <UIcon name="i-uil-github" class="w-5 h-5" />
+        </NuxtLink>
       </div>
 
       <h1
