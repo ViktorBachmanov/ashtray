@@ -5,7 +5,7 @@
 
 <template>
   <UApp>
-    <main class="max-v-[100vw] md:max-w-[1000px] mx-auto pb-16 mt-4">
+    <main class="max-v-[100vw] md:max-w-[1000px] mx-auto pb-14 mt-4">
       <div class="flex justify-end min-h-10">
         <UColorModeButton class="mt-2 mr-4" />
       </div>
@@ -88,23 +88,32 @@
       
       </main>
 
-      <footer class="flex flex-col items-center border-t-1 border-gray-300 pt-12 pb-16">
-        <table>          
-          <tbody>
-            <tr>
-              <td>Дизайн <span class="whitespace-nowrap">3D-модели</span></td>
-              <td>Бачманов</td>
-            </tr>
-            <tr>
-              <td>Программирование ЧПУ</td>
-              <td>Виктор</td>
-            </tr>
-            <tr>
-              <td>Фрезеровка на станке <span class="whitespace-nowrap">AWEA</span></td>
-              <td>Владимирович</td>
-            </tr>
-          </tbody>
-        </table>
+      <footer class="flex flex-col items-center border-t-1 border-gray-300 pt-10 pb-16">
+        <div class="flex items-center">
+          <!-- <table>          
+            <tbody>
+              <tr>
+                <td>Дизайн <span class="whitespace-nowrap">3D-модели</span></td>
+              </tr>
+              <tr>
+                <td>Программирование ЧПУ</td>
+              </tr>
+              <tr>
+                <td>Фрезеровка на станке <span class="whitespace-nowrap">AWEA</span></td>
+              </tr>
+            </tbody>
+          </table> -->
+          <ul>
+            <li>Дизайн <span class="whitespace-nowrap">3D-модели</span></li>
+            <li>ЧПУ - программы</li>
+            <li>Фрезеровка на станке</li>
+          </ul>
+
+          <div class="border border-l-0 min-w-2 ml-3 rounded-tr-lg rounded-br-lg py-3 self-stretch"></div>
+          <!-- <div class="-ml-[3px] -mt-[3px] opacity-75">&#9658;</div> -->
+
+          <div class="ml-3">Бачманов Виктор</div>
+        </div>
 
         <div class="text-center mt-8">
           Материал
@@ -125,7 +134,13 @@ td {
 }
 
 th:first-child, td:first-child {
-  padding-right: 1em;
+  padding-right: 0.5em;
   text-align: right;
+}
+
+ul {
+  text-align: right;
+  /* list-style-type: circle; 
+  direction: rtl; */
 }
 </style>
