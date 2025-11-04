@@ -44,6 +44,7 @@ useHead({
             muted
             playsinline
             controls
+            preload="none"
             src="/video/set-10.webm"
             class="mx-auto max-h-screen"
             poster="/images/mach-poster-2.png"
@@ -128,11 +129,11 @@ useHead({
         </div>
 
       </footer>
-
-      <LazyYandexMetrika
-        v-if="isWorkDomain"
-      />
   </UApp>
+
+  <LazyYandexMetrika
+    v-if="isWorkDomain"
+  />
 </template>
 
 <style scoped>
