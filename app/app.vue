@@ -54,7 +54,7 @@ useHead({
             controls
             preload="none"
             src="/video/set-10.webm"
-            class="mx-auto max-h-[90vh] md:w-[40vw]"
+            class="mx-auto max-h-[90vh] md:w-[44vw]"
             poster="/images/mach-poster-2.png"
           >
           </video>
