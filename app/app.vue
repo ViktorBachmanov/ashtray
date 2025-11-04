@@ -119,15 +119,19 @@ useHead({
           <div class="border border-l-0 min-w-2 ml-3 rounded-tr-lg rounded-br-lg py-3 self-stretch"></div>
           <!-- <div class="-ml-[3px] -mt-[3px] opacity-75">&#9658;</div> -->
 
-          <div class="ml-3">Бачманов В. В.</div>
+          <div class="ml-3">Бачманов В.В.</div>
         </div>
 
         <div class="text-center mt-8">
-          Материал
-          <span class="ml-4">Алюминий</span>
+          Материал:
+          <span class="ml-2">Алюминий</span>
         </div>
 
       </footer>
+
+      <LazyYandexMetrika
+        v-if="isWorkDomain"
+      />
   </UApp>
 </template>
 
