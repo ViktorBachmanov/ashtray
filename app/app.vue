@@ -44,7 +44,7 @@ useHead({
 
         <div class="shadow-2xl  rounded-t-xl ">
           <h2 class="text-xl sm:text-2xl font-medium indent-3 p-2">
-            Симуляция черновой и получистовой обработки
+            Симуляция черновой и получистовой обработок
           </h2>
 
           <video
@@ -53,10 +53,11 @@ useHead({
             playsinline
             controls
             preload="none"
-            src="/video/set-10.webm"
             class="mx-auto max-h-[90vh] md:w-[44vw]"
             poster="/images/mach-poster-2.png"
           >
+            <source src="/video/set-10.webm" type="video/webm" />
+            <source src="/video/set-10.mp4" type="video/mp4" />
           </video>
         </div>
 
